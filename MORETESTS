@@ -1,0 +1,14 @@
+TODO
+
+  Dist::Zilla::Plugin::Test::ChangesHasContent
+  Test::PerlTidy
+  Test::Pod
+  Test::Pod::Coverage
+  Test::Synopsis
+  Test::TestCoverage
+
+IN PROGRESS
+
+  Test::Perl::Critic
+
+DONE
