@@ -31,7 +31,6 @@ our %EXPORT_TAGS = ( # export groups
         fopen
     }],
     math => [qw{
-        count_bits
         extrapolate
         gcd
         interpolate
@@ -198,14 +197,6 @@ sub list_find { ## no critic
 }
 
 =head1 MATH FUNCTIONS (C<:math> or C<:maths>)
-
-=head2 count_bits
-
-XXX
-
-=cut
-
-sub count_bits {}
 
 =head2 extrapolate, interpolate
 
