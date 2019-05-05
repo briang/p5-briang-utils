@@ -1,0 +1,47 @@
+=pod
+
+=for HTML <a href="https://travis-ci.org/briang/p5-briang-utils"><img src="https://api.travis-ci.org/briang/p5-briang-utils.svg?branch=master"></a>
+
+=for HTML <a href="https://ci.appveyor.com/api/project/briang/p5-briang-utils"><img src="https://ci.appveyor.com/api/projects/status/github/briang/p5-briang-utils?branch=master&svg=true"></a>
+
+=for HTML <a href='https://coveralls.io/github/briang/p5-briang-utils?branch=master'><img src='https://coveralls.io/repos/github/briang/p5-briang-utils/badge.svg?branch=master' alt='Coverage Status' /></a>
+
+=head1 Bit::Twiddling
+
+Version 0.012
+
+=head2 INSTALLATION
+
+To install this module, run the following commands:
+
+    perl Makefile.PL
+    make
+    make test
+    make install
+
+Or, just use your favorite CPAN client
+
+    cpanm Bit::Twiddling
+
+=head2 DEPENDENCIES
+
+XXX
+
+=head2 SOURCE CODE REPOSITORY
+
+XXX
+
+=head2 BUGS AND ISSUES
+
+XXX
+
+=head2 CONTRIBUTING
+
+XXX
+
+=head2 COPYRIGHT AND LICENCE
+
+Copyright (C) 2019, Brian Greenfield
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
