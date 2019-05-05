@@ -125,7 +125,7 @@ missing or an C<undefined argument> error if undefined.
 
 =cut
 
-sub last_n {
+sub last_n { ## no critic
     croak "not enough arguments" unless @_ > 0;
     croak "undefined argument" unless defined $_[0];
 
@@ -154,9 +154,9 @@ For example:
 
 =cut
 
-sub uniq_keep_first {
+sub uniq_keep_first { ## no critic
     my %seen;
-    return grep { $seen{$_}++ ? () : $_ } @_
+    return grep { $seen{$_}++ ? () : $_ } @_;
 }
 
 =head2 uniq_keep_last
@@ -173,7 +173,7 @@ For example:
 
 =cut
 
-sub uniq_keep_last {
+sub uniq_keep_last { ## no critic
     my %seen = map { $_[$_] => $_ } 0 .. $#_; # $item => $last_index_seen_at
     return sort { $seen{$a} <=> $seen{$b} } keys %seen;
 }
@@ -184,7 +184,8 @@ XXX
 
 =cut
 
-sub list_find { # XXX use List::MoreUtils::first_index() ???
+# XXX use List::MoreUtils::first_index() ???
+sub list_find { ## no critic
     my $target = shift;
 
     my $ii = 0;
@@ -228,7 +229,7 @@ Based on the C function C<map()> provided by the Arduino platform
 
 =cut
 
-sub extrapolate {
+sub extrapolate { ## no critic
     croak sprintf "extrapolate() requires 5 or 6 arguments: %d given", scalar @_
       unless @_ == 5 || @_ == 6;
     my ($value, $from_low, $from_high, $to_low, $to_high, $throw) = @_;
@@ -289,7 +290,7 @@ default value of C<from_neginf> is false.
 
 =cut
 
-sub normal_cdf {
+sub normal_cdf { ## no critic
     croak "cdf() requires POSIX version "
       if $POSIX::VERSION < 1.53_01;
     croak "invalid number of arguments"
@@ -340,7 +341,7 @@ element of C<@list>.
 
 =cut
 
-sub ltrim {
+sub ltrim { # XXX
     if (@_ == 0) {
         s/^\s+//;
     }
