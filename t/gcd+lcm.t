@@ -19,7 +19,7 @@ if (0) {
 }
 ################################################################################
 use lib 'lib';
-use Test::More qw(no_plan);
+use Test::More;
 
 use BRIANG::Utils qw'gcd lcm';
 

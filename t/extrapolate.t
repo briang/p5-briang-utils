@@ -15,7 +15,7 @@ use Data::Dump;
 ################################################################################
 use BRIANG::Utils 'extrapolate';
 
-use Test::More qw(no_plan);
+use Test::More;
 
 my $EPSILON = 0.001;
 
