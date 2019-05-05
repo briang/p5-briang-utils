@@ -1,4 +1,7 @@
-module-template
 MORETESTS
 .git
 .gitignore
+
+\.bak$
+^MANIFEST\.
+^Makefile$
