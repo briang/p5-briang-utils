@@ -2,7 +2,7 @@
 
 use 5.10.1;
 
-use strict;  use warnings;  use autodie qw/:all/;
+use strict;  use warnings;
 
 BEGIN {
     if ($ENV{EMACS}) {
