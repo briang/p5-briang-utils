@@ -24,3 +24,14 @@ WriteMakefile(
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'BRIANG-Utils-*' },
 );
+
+sub MY::postamble {
+    return <<'MAKE_FRAG';
+
+.PHONY: trial
+
+trial: dist
+	mv $(DISTVNAME).tar$(SUFFIX) $(DISTVNAME)-TRIAL.tar$(SUFFIX)
+
+MAKE_FRAG
+}
