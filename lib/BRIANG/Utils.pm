@@ -1,6 +1,6 @@
 package BRIANG::Utils;
 
-use strict;  use warnings;  use autodie qw/:all/;
+use strict;  use warnings;
 use 5.010;
 
 use Carp qw/carp croak/;
@@ -105,7 +105,6 @@ sub fopen {
     croak "filename (\Q$file\E) contains illegal characters"
       if $file =~ m/^[<|>]/;
 
-    no autodie;
     open my $handle, $mode, $file
       or croak "Can't open '$file': $!";
     return $handle;
