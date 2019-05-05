@@ -9,8 +9,6 @@ BEGIN {
 	use lib 'lib';
     }
 }
-
-use Data::Dump;
 ################################################################################
 use BRIANG::Utils qw'normal_cdf';
 

@@ -10,8 +10,6 @@ BEGIN {
 	use lib 'lib';
     }
 }
-
-use Data::Dump;
 ################################################################################
 use BRIANG::Utils qw'uniq_keep_first uniq_keep_last';
 

@@ -10,13 +10,6 @@ BEGIN {
         use lib 'lib';
     }
 }
-
-use Data::Dump;
-
-if (0) {
-    no strict 'refs';
-    diag($_), $_->() for grep { /^test_/ } keys %::
-}
 ################################################################################
 use lib 'lib';
 use Test::More;

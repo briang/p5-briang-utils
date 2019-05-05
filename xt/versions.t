@@ -10,8 +10,6 @@ BEGIN {
 	use lib 'lib';
     }
 }
-
-use Data::Dump;
 ################################################################################
 use ExtUtils::MM;
 use File::Find::Rule;

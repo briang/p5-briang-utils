@@ -8,8 +8,6 @@ use POSIX ();
 
 use parent 'Exporter';
 
-use Data::Dump; # XXX
-
 =head1 NAME
 
 BRIANG::Utils - miscellaneous utilities
