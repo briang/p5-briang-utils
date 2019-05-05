@@ -27,7 +27,7 @@ WriteMakefile(
         'Carp'     => 0,
         'Exporter' => 0,
         'parent'   => 0,
-        'POSIX '   => '1.53_01',
+        'POSIX '   => 0, # 1.5301 required for cdf()
         'strict'   => 0,
         'warnings' => 0,
     },
