@@ -6,7 +6,7 @@
 
 =for HTML <a href='https://coveralls.io/github/briang/p5-briang-utils?branch=master'><img src='https://coveralls.io/repos/github/briang/p5-briang-utils/badge.svg?branch=master' alt='Coverage Status' /></a>
 
-=head1 Bit::Twiddling
+=head1 BRIANG::Utils
 
 Version 0.012
 
@@ -21,7 +21,7 @@ To install this module, run the following commands:
 
 Or, just use your favorite CPAN client
 
-    cpanm Bit::Twiddling
+    cpanm BRIANG::Utils
 
 =head2 DEPENDENCIES
 
