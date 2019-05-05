@@ -290,6 +290,8 @@ default value of C<from_neginf> is false.
 =cut
 
 sub normal_cdf {
+    croak "cdf() requires POSIX version "
+      if $POSIX::VERSION < 1.53_01;
     croak "invalid number of arguments"
       unless @_ == 1 || @_ == 3;
     my ($x, %opt) = @_;
