@@ -279,11 +279,14 @@ deviations of the mean. Or, when C<from_neginf> is true, the
 probablility of that random variable being less than C<$x>. The
 default value of C<from_neginf> is false.
 
+This function relies on POSIX C<erf()> function, which was first added
+in POSIX version 1.43 in Perl version 5.21.4 (2014-Sep-20).
+
 =cut
 
 sub normal_cdf { ## no critic
-    croak "cdf() requires POSIX version 1.5301 or later"
-      if $POSIX::VERSION < 1.53_01;
+    croak "cdf() requires POSIX version 1.43 or later"
+      if $POSIX::VERSION < 1.43;
     croak "invalid number of arguments"
       unless @_ == 1 || @_ == 3;
     my ($x, %opt) = @_;

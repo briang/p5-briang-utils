@@ -20,8 +20,8 @@ sub round {
     return 1 * sprintf "%.${dp}f", $f;
 }
 
-if ( $POSIX::VERSION < 1.5301 ) {
-    plan skip_all => "POSIX 1.5301 required for erf(), $POSIX::VERSION installed";
+if ( $POSIX::VERSION < 1.43 ) {
+    plan skip_all => "POSIX 1.43 required for erf(), $POSIX::VERSION installed";
 }
 
 throws_ok { normal_cdf()            } qr'invalid number of arguments';
