@@ -10,6 +10,9 @@
 
 Version 0.012
 
+A collection of small, miscellaneous utilities frequently used by the
+author, but that aren't worthy of their own distribution.
+
 =head2 INSTALLATION
 
 To install this module, run the following commands:
@@ -25,19 +28,20 @@ Or, just use your favorite CPAN client
 
 =head2 DEPENDENCIES
 
-XXX
+There are no dependencies on non-core modules. L<Test::Exception> is
+required for testing, however.
 
 =head2 SOURCE CODE REPOSITORY
 
-XXX
-
-=head2 BUGS AND ISSUES
-
-XXX
+The distribution is hosted on
+L<github|https://github.com/briang/p5-briang-utils> and bugs and
+issues can be posted
+L<there|https://github.com/briang/p5-briang-utils/issues>.
 
 =head2 CONTRIBUTING
 
-XXX
+All contributions are welcome, no matter the size. Just be nice to
+each other :)
 
 =head2 COPYRIGHT AND LICENCE
 
