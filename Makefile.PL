@@ -17,13 +17,11 @@ WriteMakefile(
     BUILD_REQUIRES => {
         'lib'                 => 0,
         'strict'              => 0,
-        'strict'              => 0,
         'Test::Exception'     => 0,
         'Test::More'          => 0,
         'warnings'            => 0,
     },
     PREREQ_PM => {
-        'autodie'  => 0,
         'Carp'     => 0,
         'Exporter' => 0,
         'parent'   => 0,
