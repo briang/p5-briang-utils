@@ -35,11 +35,12 @@ WriteMakefile(
 
 sub MY::postamble {
     return <<'MAKE_FRAG';
-
-.PHONY: trial
+.PHONY: authortests trial
 
 trial: dist
 	mv $(DISTVNAME).tar$(SUFFIX) $(DISTVNAME)-TRIAL.tar$(SUFFIX)
 
+authortests:
+	prove -l xt
 MAKE_FRAG
 }
