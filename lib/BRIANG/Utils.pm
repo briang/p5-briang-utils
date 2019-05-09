@@ -174,7 +174,8 @@ For example:
 
 sub uniq_keep_last { ## no critic
     my %seen = map { $_[$_] => $_ } 0 .. $#_; # $item => $last_index_seen_at
-    return sort { $seen{$a} <=> $seen{$b} } keys %seen;
+    my @rv = sort { $seen{$a} <=> $seen{$b} } keys %seen;
+    return @rv;
 }
 
 =head2 list_find
@@ -339,6 +340,7 @@ sub ltrim { # XXX
     if (@_ == 0) {
         s/^\s+//;
     }
+    return "XXX";
 }
 
 =head2 timestamp
