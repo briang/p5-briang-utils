@@ -1,7 +1,7 @@
-MORETESTS
 .git
 .gitignore
-
+MANIFEST\.SKIP
+MORETESTS
 \.bak$
-^MANIFEST\.
 ^Makefile$
+~$
