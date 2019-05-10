@@ -63,12 +63,12 @@ $EXPORT_TAGS{all} = \@EXPORT_OK;
 =head1 EXPORTS
 
 This module does not export any functions by default. Any functions
-you want to be exported into your own code must be explicity named
-explicitly:
+you want to be exported into your own code must be explicity named in
+the import list:
 
     use BRIANG::Utils qw/fopen/;
 
-or by using one or more export tags:
+or, by using one or more export tags:
 
     use BRIANG::Utils qw/:file/;
 
