@@ -367,51 +367,36 @@ __END__
 
 Brian Greenfield, C<< <briang at cpan dot org> >>
 
-=head1 BUGS
+=head1 REPORTING BUGS & OTHER WAYS TO CONTRIBUTE
 
-Please report any bugs or feature requests to C<bug-briang-utils at
-rt.cpan.org>XXX, or through the web interface at
-L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=BRIANG-Utils>XXX. I will
-be notified, and then you'll automatically be notified of progress on
-your bug as I make changes.
+Patches to the code and documentation are welcome and GitHub Pull
+Requests are the preferred method of submission.
 
-=head1 SOURCE CODE REPOSITORY
-
-XXX
+Bugs and feature requests should be reported using GitHub issues at
+L<p5-briang-utils/issues|https://github.com/briang/p5-briang-utils/issues>.
 
 =head1 SUPPORT
 
-You can find documentation for this module with the perldoc command.
+The code for this module is maintained on GitHub at
+L<briang/p5-briang-utils|https://github.com/briang/p5-briang-utils>.
+
+The most recent version of the distribution can be optained from
+L<MetaCPAN|https://metacpan.org/> and is best installed using your
+favorite CPAN client using a command such as
+
+    cpanm BRIANG::Utils
+
+Once it has been installed, you can read the module's documentation
+from the command line by using the C<perldoc> program:
 
     perldoc BRIANG::Utils
 
-You can also look for information at:
-
-=over 4
-
-=item * RT: CPAN's request tracker (report bugs here)
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=BRIANG-Utils>XXX
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/BRIANG-Utils>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/BRIANG-Utils>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/BRIANG-Utils/>
-
-=back
-
-=head1 ACKNOWLEDGEMENTS
+Or, the documentation can be read without installing by visiing
+L<metacpan.org/pod/Bit::Twiddling|https://metacpan.org/pod/Bit::Twiddling>
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2016 Brian Greenfield.
+Copyright 2019 Brian Greenfield.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

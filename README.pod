@@ -31,18 +31,6 @@ Or, just use your favorite CPAN client
 There are no dependencies on non-core modules. L<Test::Exception> is
 required for testing, however.
 
-=head2 SOURCE CODE REPOSITORY
-
-The distribution is hosted on
-L<github|https://github.com/briang/p5-briang-utils> and bugs and
-issues can be posted
-L<there|https://github.com/briang/p5-briang-utils/issues>.
-
-=head2 CONTRIBUTING
-
-All contributions are welcome, no matter the size. Just be nice to
-each other :)
-
 =head2 COPYRIGHT AND LICENCE
 
 Copyright (C) 2019, Brian Greenfield
