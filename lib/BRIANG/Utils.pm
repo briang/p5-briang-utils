@@ -73,7 +73,7 @@ or, by using one or more export tags:
     use BRIANG::Utils qw/:file/;
 
 The following export tags are valid: C<:all>, C<:list>, C<:math> (or
-C:<maths>), C<:file> and C<:string>.
+C<:maths>), C<:file> and C<:string>.
 
 =head1 FILE FUNCTIONS (C<:file>)
 
@@ -90,8 +90,8 @@ C<$mode> is optional and defaults to reading.
 See L<perlfunc/open> for more details on C<$mode>.
 
 Standard exceptions will be thrown if an error occurs when opening the
-file, and a new exception (C<filename (\Q$file\E) contains illegal
-characters>) is thrown if C<$filename> matches C<<qr/^[<|>]/>>.
+file, and a new exception (C<filename ($file) contains illegal
+characters>) is thrown if C<$filename> matches C<< qr/^[<|>]/ >>.
 
 =cut
 
@@ -116,8 +116,8 @@ sub fopen {
 C<last_n> returns the last C<$n> elements of C<@list> in the same
 order that they were in C<@list>.
 
-If C<<$n <= 0>> an empty list will be returned and if C<<$n >= @list>>
-the original list will be returned.
+If C<< $n <= 0 >> an empty list will be returned and if C<< $n >=
+@list >> the original list will be returned.
 
 C<last_n> will throw a C<not enough arguments> error if C<$n> is
 missing or an C<undefined argument> error if undefined.
@@ -149,7 +149,7 @@ encountered, the first occurance is the one that is kept.
 
 For example:
 
-    uniq_keep_first( 1, 2, 3, 2 ); # 1, 2, 3
+    uniq_keep_first( 2, 1, 2, 3, 2 ); # 2, 1, 3
 
 =cut
 
@@ -204,7 +204,7 @@ sub list_find { ## no critic
     $mapped_value = extrapolate($value,
         $from_low, $from_high, $to_low, $to_high, $throw=undef)
 
-C<interpolate()> is a synonym of C<extrapolate()>.
+C<interpolate()> and C<extrapolate()> are aliases of each other.
 
 Re-maps a number from one range to another. That is, a C<$value> of
 C<$from_low> would get mapped to C<$to_low> and a C<$value> of
