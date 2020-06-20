@@ -32,6 +32,6 @@ timestamp(
 say scalar gmtime    1_500_000_000; # Fri Jul 14 02:40:00 2017
 say scalar localtime 1_500_000_000; # Fri Jul 14 03:40:00 2017
 
-pass;
+pass; # XXX
 
 done_testing;
