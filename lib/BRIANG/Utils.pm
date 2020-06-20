@@ -32,10 +32,13 @@ our %EXPORT_TAGS = ( # export groups
     }],
     math => [qw{
         extrapolate
+        fact
         gcd
         interpolate
         lcm
+        ncr
         normal_cdf
+        npr
     }],
     string => [qw{
         is_in
@@ -234,6 +237,27 @@ sub extrapolate { ## no critic
 }
 *interpolate = *interpolate = \&extrapolate; # avoid "used only once" warning
 
+=head2 fact
+
+    $factorial_of_num = fact($num)
+
+Calculates the factorial of C<$num>. C<$num> is rounded down if it is
+fractional. A C<Can't take fact of %d> exception is thrown if C<$num>
+is negative.
+
+=cut
+
+# XXX metacpan.org POD renderer is down so fact(), ncr() & npr() are
+# unchecked :(
+
+sub fact {
+    die "Can't take fact of $_[0]" if $_[0] < 0;
+
+    my $fact = 1;
+    $fact *= $_ for 2 .. $_[0];
+    return $fact;
+}
+
 =head2 gcd
 
     $integer = gcd(@list)
@@ -269,6 +293,20 @@ sub lcm {
     return lcm(lcm($a, $b), @rest);
 }
 
+=head ncr
+
+    $combinations = ncr($from, $choose)
+
+Calculates the number of combinations (order doesn't matter) when
+picking C<$choose> items from C<$from>.
+
+=cut
+
+sub ncr {
+    my ($from, $choose) = @_;
+    return fact($from) / fact($from - $choose) / fact($choose);
+}
+
 =head2 normal_cdf
 
     $p = normal_cdf($x, from_neginf => $bool)
@@ -300,6 +338,20 @@ sub normal_cdf { ## no critic
     $x = abs $x unless $opt{from_neginf};
     my $erf = POSIX::erf( $x / sqrt(2) );
     return $opt{from_neginf} ? 0.5 + $erf / 2 : $erf;
+}
+
+=head npr
+
+    $permutations = ncr($from, $choose)
+
+Calculates the number of permutations (order matters) when picking
+C<$choose> items from C<$from>.
+
+=cut
+
+sub npr {
+    my ($from, $choose) = @_;
+    return fact($from) / fact($from - $choose);
 }
 
 =head1 STRING FUNCTIONS (C<:string>)
