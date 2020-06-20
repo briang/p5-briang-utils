@@ -250,8 +250,8 @@ is negative.
 # XXX metacpan.org POD renderer is down so fact(), ncr() & npr() are
 # unchecked :(
 
-sub fact {
-    die "Can't take fact of $_[0]" if $_[0] < 0;
+sub fact { ## no critic
+    croak "Can't take fact of $_[0]" if $_[0] < 0;
 
     my $fact = 1;
     $fact *= $_ for 2 .. $_[0];
