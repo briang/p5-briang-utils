@@ -4,7 +4,7 @@ use 5.10.1;
 use strict;  use warnings FATAL => 'all';
 
 BEGIN {
-    if ($ENV{EMACS}) {
+    if ($ENV{INSIDE_EMACS}) {
 	chdir '..' until -d 't';
 	use lib 'lib';
     }
