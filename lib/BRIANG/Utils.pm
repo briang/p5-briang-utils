@@ -33,6 +33,7 @@ our %EXPORT_TAGS = ( # export groups
     math => [qw{
         extrapolate
         fact
+        frac
         gcd
         interpolate
         lcm
@@ -256,6 +257,35 @@ sub fact { ## no critic
     my $fact = 1;
     $fact *= $_ for 2 .. $_[0];
     return $fact;
+}
+
+=head2 frac
+
+    $fractional_part = frac($num)
+
+Returns the fractional part of C<$num>. C<frac($num)> will be negative if
+C<$num> is negative.
+
+Returns the fractional part of C<$num>. The sign of C<frac($num)> will be the
+same as the sign of C<$num>.
+
+The following warning may be thrown:
+
+=over 4
+
+=item *
+
+C<frac() with a large argument (eg +/- 2^53) will lose precision> if C<abs $num>
+is too big.
+
+=back
+
+=cut
+
+sub frac {
+    carp qq[frac() with a large argument (eg +/- 2^53) will lose precision]
+        if abs($_[0]) > 2**53;
+    return $_[0] - int $_[0]
 }
 
 =head2 gcd
