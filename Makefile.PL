@@ -35,13 +35,17 @@ WriteMakefile(
 );
 
 sub MY::postamble {
-    return <<'MAKE_FRAG';
+    my $postamble = <<'MAKE_FRAG';
 .PHONY: authortests trial
 
 trial: dist
-	mv $(DISTVNAME).tar$(SUFFIX) $(DISTVNAME)-TRIAL.tar$(SUFFIX)
+  mv $(DISTVNAME).tar$(SUFFIX) $(DISTVNAME)-TRIAL.tar$(SUFFIX)
 
 authortests:
-	prove -l xt
+  prove -l xt
 MAKE_FRAG
+
+    $postamble =~ s/^[ ]+/\t/gm;
+
+    return $postamble;
 }
