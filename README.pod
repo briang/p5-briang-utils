@@ -1,8 +1,6 @@
 =pod
 
-=for HTML <a href="https://travis-ci.org/briang/p5-briang-utils"><img src="https://api.travis-ci.org/briang/p5-briang-utils.svg?branch=master"></a>
-
-=for HTML <a href="https://ci.appveyor.com/api/project/briang/p5-briang-utils"><img src="https://ci.appveyor.com/api/projects/status/github/briang/p5-briang-utils?branch=master&svg=true"></a>
+=for HTML <img src="https://github.com/briang/p5-briang-utils/actions/workflows/ci.yml/badge.svg" alt='GitHub build status' />
 
 =for HTML <a href='https://coveralls.io/github/briang/p5-briang-utils?branch=master'><img src='https://coveralls.io/repos/github/briang/p5-briang-utils/badge.svg?branch=master' alt='Coverage Status' /></a>
 
