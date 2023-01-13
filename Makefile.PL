@@ -15,6 +15,7 @@ WriteMakefile(
         'ExtUtils::MakeMaker' => 0,
     },
     BUILD_REQUIRES => {
+        'Config'              => 0,
         'lib'                 => 0,
         'strict'              => 0,
         'Test::Exception'     => 0,
