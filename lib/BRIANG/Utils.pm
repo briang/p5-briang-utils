@@ -282,7 +282,7 @@ is too big.
 
 =cut
 
-sub frac {
+sub frac { ## no critic
     carp qq[frac() with a large argument (eg +/- 2^53) will lose precision]
         if abs($_[0]) > 2**53;
     return $_[0] - int $_[0]
