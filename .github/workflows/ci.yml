@@ -1,11 +1,13 @@
 # https://raw.githubusercontent.com/jhthorsen/getopt-app/main/.github/workflows/ci.yml
 
 name: ci
+
 on:
   pull_request:
   push:
     branches:
       - "**"
+
 jobs:
   perl:
     name: "Perl ${{matrix.perl}} on ${{matrix.os}}"
