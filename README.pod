@@ -2,6 +2,8 @@
 
 =for HTML <img src="https://github.com/briang/p5-briang-utils/actions/workflows/ci.yml/badge.svg" alt='GitHub build status' />
 
+=for HTML <a href='https://coveralls.io/github/briang/p5-briang-utils?branch=master'><img src='https://coveralls.io/repos/github/briang/p5-briang-utils/badge.svg?branch=master' alt='Coverage Status' /></a>
+
 =head1 BRIANG::Utils
 
 Version 0.012
