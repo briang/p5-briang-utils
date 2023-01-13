@@ -36,10 +36,13 @@ WriteMakefile(
 
 sub MY::postamble {
     my $postamble = <<'MAKE_FRAG';
-.PHONY: authortests trial
+.PHONY: authortests cover trial
 
 trial: dist
   mv $(DISTVNAME).tar$(SUFFIX) $(DISTVNAME)-TRIAL.tar$(SUFFIX)
+
+cover:
+  PERL5OPT=-MDevel::Cover make test
 
 authortests:
   prove -l xt
