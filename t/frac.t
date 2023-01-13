@@ -22,8 +22,7 @@ my @tests = (
     ['4/3',        '1/3'  ],
     ['-5/3',       '-2/3' ],
     ['1e15+1/8',   '1/8'  ],
-
-    ['2**30+1/8',  '1/8'  ],
+    ['2**45+1/8',  '1/8'  ], # max? with no uselongdouble
 );
 
 if (defined $Config{'uselongdouble'}) {
