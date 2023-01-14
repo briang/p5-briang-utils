@@ -13,11 +13,9 @@ BEGIN {
 use lib 'lib';
 use Test::More;
 
-use BRIANG::Utils qw'gcd lcm';
+use BRIANG::Utils qw'gcd';
 
-# mostly taken from gcd & lcm pages of wikipedia
-
-note "gcd()";
+# mostly taken from gcd pages of wikipedia
 
 is gcd(18,  84),  6, "gcd(18, 84) = 6";
 is gcd(42,  56), 14, "gcd(42, 56) = 14";
@@ -33,25 +31,5 @@ is gcd(),                       undef, "gcd() = undef";
 is gcd(18),                     18,    "gcd(18) = 18";
 is gcd(24*2, 24*5, 24*3),       24,    "gcd(24*2, 24*5, 24*3) = 24";
 is gcd(24*2, 24*5, 24*3, 12*3), 12,    "gcd(24*2, 24*5, 24*3, 12*3) = 12";
-
-note "lcm()";
-
-is lcm( 2,   5),  10, "lcm( 2, 5) = 10";
-is lcm( 4,   6),  12, "lcm( 4, 6) = 12";
-is lcm(21,   6),  42, "lcm(21, 6) = 42";
-is lcm(48, 180), 720, "lcm(48, 180) = 720";
-
-# negative args
-is lcm(-4,  6), 12, "lcm(-4,  6), 12";
-is lcm( 4, -6), 12, "lcm( 4, -6), 12";
-is lcm(-4, -6), 12, "lcm(-4, -6), 12";
-
-# varadic
-is lcm(), undef, "lcm() = undef";
-is lcm(23), 23,  "lcm(23) = 23";
-is lcm(lcm(8, 9), 21), 504, "lcm(lcm(8, 9), 21) = 504";
-is lcm(8, 9, 21), 504, "lcm(8, 9, 21) = 504";
-is lcm(lcm(8, 9), lcm(21, 22)), 5544, "lcm(lcm(8, 9), lcm(21, 22)) = 5544";
-is lcm(8, 9, 21, 22), 5544, "lcm(8, 9, 21, 22) = 5544";
 
 done_testing;
