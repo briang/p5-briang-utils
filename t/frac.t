@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 use 5.10.1;
-use strict;  use warnings FATAL => 'all';
+use strict;  use warnings;
 
 BEGIN {
     if ($ENV{INSIDE_EMACS}) {

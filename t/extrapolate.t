@@ -1,18 +1,18 @@
 #!/usr/bin/env perl
 
 use 5.10.1;
-use strict;  use warnings FATAL => 'all';
+use strict;  use warnings;
 
 BEGIN {
     if ($ENV{INSIDE_EMACS}) {
-	chdir '..' until -d 't';
-	use lib 'lib';
+        chdir '..' until -d 't';
+        use lib 'lib';
     }
 }
 ################################################################################
-use BRIANG::Utils 'extrapolate';
-
 use Test::More;
+
+use BRIANG::Utils 'extrapolate';
 
 my $EPSILON = 0.001;
 
