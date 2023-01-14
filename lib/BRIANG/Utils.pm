@@ -388,11 +388,11 @@ sub npr {
 
 =head2 is_in
 
-XXX
+XXX What's this supposed to do
 
 =cut
 
-sub is_in {}
+sub is_in { 'XXX' }
 
 =head2 ltrim
 
