@@ -354,7 +354,7 @@ in POSIX version 1.43 in Perl version 5.21.4 (2014-Sep-20).
 =cut
 
 sub normal_cdf { ## no critic
-    croak "cdf() requires POSIX version 1.43 or later"
+    croak "normal_cdf() requires POSIX version 1.43 or later"
       if $POSIX::VERSION < 1.43;
     croak "invalid number of arguments"
       unless @_ == 1 || @_ == 3;
