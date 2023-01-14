@@ -1,27 +1,23 @@
 #!/usr/bin/env perl
 
 use 5.10.1;
-use strict;  use warnings FATAL => 'all';
+use strict;  use warnings;
 
 BEGIN {
     if ($ENV{INSIDE_EMACS}) {
-	chdir '..' until -d 't';
-	use lib 'lib';
+        chdir '..' until -d 't';
+        use lib 'lib';
     }
 }
 ################################################################################
-use BRIANG::Utils qw'normal_cdf';
-
 use Test::More;
 use Test::Exception;
+
+use BRIANG::Utils qw'normal_cdf';
 
 sub round {
     my ($f, $dp) = @_;
     return 1 * sprintf "%.${dp}f", $f;
-}
-
-if ( $POSIX::VERSION < 1.43 ) {
-    plan skip_all => "POSIX 1.43 required for erf(), $POSIX::VERSION installed";
 }
 
 throws_ok { normal_cdf()            } qr'invalid number of arguments';
