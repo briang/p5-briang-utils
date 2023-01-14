@@ -11,16 +11,17 @@ BEGIN {
 }
 ################################################################################
 use Test::More;
-use Test::Exception;
 
 use BRIANG::Utils qw'timestamp';
 
-timestamp(
-    epoch  => 1000000000,
-    format => ' ... ',
-    local  => 0,
-    time   => [  ],
-);
+is timestamp(), 'XXX', qq[timestamp() is not implemented];
+
+# timestamp(
+#     epoch  => 1000000000,
+#     format => ' ... ',
+#     local  => 0,
+#     time   => [  ],
+# );
 
 # formats:
 #
@@ -29,9 +30,7 @@ timestamp(
 # D      YYYYMMDD only
 # T      HHMMSS only
 
-say scalar gmtime    1_500_000_000; # Fri Jul 14 02:40:00 2017
-say scalar localtime 1_500_000_000; # Fri Jul 14 03:40:00 2017
-
-pass; # XXX
+# say scalar gmtime    1_500_000_000; # Fri Jul 14 02:40:00 2017
+# say scalar localtime 1_500_000_000; # Fri Jul 14 03:40:00 2017
 
 done_testing;

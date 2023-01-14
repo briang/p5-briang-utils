@@ -434,6 +434,7 @@ XXX
 =cut
 
 sub timestamp {
+    return 'XXX';
     my ($sec, $min, $hour, $day, $mon, $year) = gmtime;
     $mon += 1;
     $year += 1900;
