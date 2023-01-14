@@ -1,19 +1,19 @@
 #!/usr/bin/env perl
 
 use 5.10.1;
-use strict;  use warnings FATAL => 'all';
+use strict;  use warnings;
 
 BEGIN {
     if ($ENV{INSIDE_EMACS}) {
-	chdir '..' until -d 't';
-	use lib 'lib';
+        chdir '..' until -d 't';
+        use lib 'lib';
     }
 }
 ################################################################################
-use BRIANG::Utils qw'timestamp';
-
 use Test::More;
 use Test::Exception;
+
+use BRIANG::Utils qw'timestamp';
 
 timestamp(
     epoch  => 1000000000,

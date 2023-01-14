@@ -94,13 +94,13 @@ C<$mode> is optional and defaults to reading.
 See L<perlfunc/open> for more details on C<$mode>.
 
 Standard exceptions will be thrown if an error occurs when opening the
-file, and a new exception (C<filename ($file) contains illegal
-characters>) is thrown if C<$filename> matches C<< qr/^[<|>]/ >>.
+file and a new exception (C<filename ($file) contains illegal
+characters>) is thrown if C<$filename> starts with '<' or '>'.
 
 =cut
 
 sub fopen {
-    my $file = shift;
+    my $file = shift // '';
     my $mode = shift // '<';
 
     croak "filename (\Q$file\E) contains illegal characters"
