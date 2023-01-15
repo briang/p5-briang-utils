@@ -323,7 +323,7 @@ sub lcm {
     return lcm(lcm($a, $b), @rest);
 }
 
-=head ncr
+=head2 ncr
 
     $combinations = ncr($from, $choose)
 
@@ -370,7 +370,7 @@ sub normal_cdf { ## no critic
     return $opt{from_neginf} ? 0.5 + $erf / 2 : $erf;
 }
 
-=head npr
+=head2 npr
 
     $permutations = ncr($from, $choose)
 
