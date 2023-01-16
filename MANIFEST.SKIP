@@ -5,3 +5,6 @@ MORETESTS
 \.bak$
 ^Makefile$
 ~$
+cover_db
+subs
+todo
