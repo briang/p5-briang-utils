@@ -392,7 +392,7 @@ XXX What's this supposed to do
 
 =cut
 
-sub is_in { 'XXX' }
+sub is_in { return 'XXX' }
 
 =head2 ltrim
 
@@ -435,11 +435,11 @@ XXX
 
 sub timestamp {
     return 'XXX';
-    my ($sec, $min, $hour, $day, $mon, $year) = gmtime;
-    $mon += 1;
-    $year += 1900;
-    return sprintf "%04d%02d%02d-%02d%02d%02d",
-      $year, $mon, $day, $hour, $min, $sec;
+    # my ($sec, $min, $hour, $day, $mon, $year) = gmtime;
+    # $mon += 1;
+    # $year += 1900;
+    # return sprintf "%04d%02d%02d-%02d%02d%02d",
+    #   $year, $mon, $day, $hour, $min, $sec;
 }
 
 1;
