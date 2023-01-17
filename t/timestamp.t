@@ -14,23 +14,8 @@ use Test::More;
 
 use BRIANG::Utils qw'timestamp';
 
-is timestamp(), 'XXX', qq[timestamp() is not implemented];
-
-# timestamp(
-#     epoch  => 1000000000,
-#     format => ' ... ',
-#     local  => 0,
-#     time   => [  ],
-# );
-
-# formats:
-#
-# G or U GMT aka UTC (default)
-# L      local time
-# D      YYYYMMDD only
-# T      HHMMSS only
-
-# say scalar gmtime    1_500_000_000; # Fri Jul 14 02:40:00 2017
-# say scalar localtime 1_500_000_000; # Fri Jul 14 03:40:00 2017
+is timestamp(0    ), '19700101-000000', 'Start of the epoch';
+is timestamp(1.5e9), '20170714-024000', 'UTC returned during BST';
+is timestamp(1.2e9), '20080110-212000', 'UTC returned during GMT';
 
 done_testing;

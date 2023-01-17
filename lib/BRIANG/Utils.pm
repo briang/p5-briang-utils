@@ -427,19 +427,24 @@ sub ltrim { # XXX
 
 =head2 timestamp
 
-    $timestamp = timestamp()
+    $timestamp = timestamp($time)
 
-XXX
+Returns the time as a 15 character string in the format C<YYYYMMDD-hhmmss>
+corresponding to C<$time>. The current date and time are used if C<$time> is
+omitted.
+
+All dates and times are UTC.
 
 =cut
 
-sub timestamp {
-    return 'XXX';
-    # my ($sec, $min, $hour, $day, $mon, $year) = gmtime;
-    # $mon += 1;
-    # $year += 1900;
-    # return sprintf "%04d%02d%02d-%02d%02d%02d",
-    #   $year, $mon, $day, $hour, $min, $sec;
+sub timestamp { ## no critic
+    my $time = $_[0] // time;
+    my ($seconds, $minutes, $hours, $day, $month, $year) = gmtime $time;
+    $month += 1;
+    $year  += 1900;
+
+    return sprintf "%04d%02d%02d-%02d%02d%02d",
+        $year, $month, $day, $hours, $minutes, $seconds;
 }
 
 1;
