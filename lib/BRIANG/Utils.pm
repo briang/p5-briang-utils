@@ -34,7 +34,6 @@ our $VERSION = '0.012';
 our %EXPORT_TAGS = ( # export groups
     list => [qw{
         last_n
-        list_find
         uniq_keep_first
         uniq_keep_last
     }],
@@ -54,11 +53,7 @@ our %EXPORT_TAGS = ( # export groups
     }],
     string => [qw{
         is_in
-        ltrim
-        rtrim
         timestamp
-        trim
-        trim_all
     }],
 );
 $EXPORT_TAGS{maths} = $EXPORT_TAGS{math};
@@ -196,25 +191,6 @@ sub uniq_keep_last { ## no critic
     my %seen = map { $_[$_] => $_ } 0 .. $#_; # $item => $last_index_seen_at
     my @rv = sort { $seen{$a} <=> $seen{$b} } keys %seen;
     return @rv;
-}
-
-=head2 list_find
-
-XXX
-
-=cut
-
-# XXX use List::MoreUtils::first_index() ???
-sub list_find { ## no critic
-    my $target = shift;
-
-    my $ii = 0;
-    for (@_) {
-        return $ii
-          if $_[$ii] eq $target;
-        $ii ++;
-    }
-    return -1;
 }
 
 =head1 MATH FUNCTIONS (C<:math> or C<:maths>)
@@ -409,37 +385,6 @@ XXX What's this supposed to do
 =cut
 
 sub is_in { return 'XXX' }
-
-=head2 ltrim
-
-    ltrim()                           # case 1
-    ltrim($string)                    # case 2
-    ltrim(@list)                      # case 3
-    $modified_string = ltrim()        # case 4
-    $modified_string = ltrim($string) # case 5
-    @modified_list   = ltrim(@list)   # case 6
-
-C<ltrim()> removes all leading spaces from a scalar, or from each
-element if passed a list.
-
-If called in void context (the first three cases above), C<ltrim()>
-changes C<$string> or C<@list> in-place. If no parameter is passed
-(the first case above), C<$_> will be left-trimmed.
-
-If called in scalar context (cases four and five) the original string
-will not be changed and, instead, a modified string will be returned.
-
-In the final case, C<ltrim()> will return a modified copy of each
-element of C<@list>.
-
-=cut
-
-sub ltrim { # XXX
-    if (@_ == 0) {
-        s/^\s+//;
-    }
-    return "XXX";
-}
 
 =head2 timestamp
 
