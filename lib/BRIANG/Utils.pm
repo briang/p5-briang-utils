@@ -51,7 +51,12 @@ our %EXPORT_TAGS = ( # export groups
     }],
 );
 $EXPORT_TAGS{maths} = $EXPORT_TAGS{math};
-our @EXPORT_OK = map { @$_ } values %EXPORT_TAGS; # symbols to export on request
+our @EXPORT_OK = do {
+    my %h =
+        map { $_ => 1 }
+        map { @$_ } values %EXPORT_TAGS; # symbols to export on request
+    sort keys %h;
+};
 $EXPORT_TAGS{all} = \@EXPORT_OK;
 
 =head1 SYNOPSIS
