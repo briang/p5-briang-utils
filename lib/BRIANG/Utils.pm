@@ -1,5 +1,16 @@
 package BRIANG::Utils;
 
+# TODO
+#
+# more functions:
+#
+#   floor
+#   ceil
+#   frac
+#   round
+#   zip
+#   unzip
+
 use strict;  use warnings;
 use 5.010;
 
