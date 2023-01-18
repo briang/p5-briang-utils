@@ -1,0 +1,19 @@
+# This is a list of modules used by the extra/author tests in `xt/*`. The
+# easiest way to install them is by using `cpanm` with the following command:
+#
+# grep -v '^#' REQUIREMENTS | cpanm
+
+ExtUtils::MM
+File::Find::Rule
+File::Spec
+FindBin
+lib
+Pod::Coverage
+strict
+Test::CheckManifest
+Test::More
+Test::Perl::Critic
+Test::Pod
+Test::Pod::Coverage
+Test::Strict
+warnings
