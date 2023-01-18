@@ -5,8 +5,8 @@ use strict;  use warnings FATAL => 'all';
 
 BEGIN {
     if ($ENV{INSIDE_EMACS}) {
-	chdir '..' until -d 't';
-	use lib 'lib';
+        chdir '..' until -d 't';
+        use lib 'lib';
     }
 }
 ################################################################################
@@ -39,8 +39,6 @@ for my $file (sort keys %versions) {
 ok keys %all_versions == 1, "Versions consistent across distribution";
 
 done_testing;
-
-
 
 sub find_pod_version {
     open my $FH, "<", shift;
