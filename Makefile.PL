@@ -10,7 +10,7 @@ WriteMakefile(
     ABSTRACT_FROM    => 'lib/BRIANG/Utils.pm',
     LICENSE          => 'artistic_2',
     PL_FILES         => {},
-    MIN_PERL_VERSION => 5.10.1,
+    MIN_PERL_VERSION => 5.21.4, # for POSIX 1.43
     CONFIGURE_REQUIRES => {
         'ExtUtils::MakeMaker' => 0,
     },
@@ -26,7 +26,7 @@ WriteMakefile(
         'Carp'     => 0,
         'Exporter' => 0,
         'parent'   => 0,
-        'POSIX'    => 0, # 1.43 required for cdf()
+        'POSIX'    => '1.43', # erf() needed for cdf()
         'strict'   => 0,
         'warnings' => 0,
     },
