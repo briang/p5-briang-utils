@@ -12,7 +12,6 @@ package BRIANG::Utils;
 #   unzip
 
 use strict;  use warnings;
-use 5.010;
 
 use Carp qw/carp croak/;
 
