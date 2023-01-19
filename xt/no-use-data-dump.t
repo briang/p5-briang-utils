@@ -9,7 +9,7 @@ use Test::More;
 use File::Find::Rule;
 use FindBin '$Bin';
 
-my @modules = map { s/-/::/gr } qw(Data-Dump Data-Dumper);
+my @modules = map { "Data::$_" } qw(Dump Dumper);
 my $RE = '\b(' . (join '|', @modules) . ')\b';
 
 my $root = "$Bin/..";

@@ -15,7 +15,6 @@ use strict;  use warnings;
 use 5.010;
 
 use Carp qw/carp croak/;
-use POSIX ();
 
 use parent 'Exporter';
 
@@ -346,8 +345,9 @@ in POSIX version 1.43 in Perl version 5.21.4 (2014-Sep-20).
 =cut
 
 sub normal_cdf { ## no critic
+    require POSIX;
     croak "normal_cdf() requires POSIX version 1.43 or later"
-      if $POSIX::VERSION < 1.43;
+      if $POSIX::VERSION lt 1.43;
     croak "invalid number of arguments"
       unless @_ == 1 || @_ == 3;
     my ($x, %opt) = @_;

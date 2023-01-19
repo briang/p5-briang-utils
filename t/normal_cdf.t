@@ -15,6 +15,9 @@ use Test::Exception;
 
 use BRIANG::Utils qw'normal_cdf';
 
+plan skip_all => 'POSIX 1.43 (included with perl 5.21.4 or later) required for normal_cdf()'
+    unless POSIX->can('erf');
+
 sub round {
     my ($f, $dp) = @_;
     return 1 * sprintf "%.${dp}f", $f;
