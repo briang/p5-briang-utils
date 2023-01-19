@@ -10,7 +10,7 @@ WriteMakefile(
     ABSTRACT_FROM    => 'lib/BRIANG/Utils.pm',
     LICENSE          => 'artistic_2',
     PL_FILES         => {},
-    MIN_PERL_VERSION => 5.12.4,
+    MIN_PERL_VERSION => 5.12.5,
     CONFIGURE_REQUIRES => {
         'ExtUtils::MakeMaker' => 0,
     },
