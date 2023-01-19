@@ -3,6 +3,7 @@
 #
 # grep -v '^#' REQUIREMENTS | cpanm
 
+Devel::Cover
 ExtUtils::MM
 File::Find::Rule
 File::Spec
