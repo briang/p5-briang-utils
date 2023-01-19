@@ -1,6 +1,5 @@
-#!perl
-use strict;
-use warnings;
+use strict; use warnings;
+
 use Test::More;
 
 my $min_tcm = 0.9;

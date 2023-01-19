@@ -1,4 +1,5 @@
 use strict; use warnings;
+
 use Test::Strict;
 
 require Devel::Cover; # needs to be found as a prereq for REQUIREMENTS

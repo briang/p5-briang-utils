@@ -1,17 +1,6 @@
-#!/usr/bin/env perl
-
 use strict;  use warnings;
 
-BEGIN {
-    if ($ENV{INSIDE_EMACS}) {
-        chdir '..' until -d 'lib';
-        use lib 'lib';
-    }
-}
-################################################################################
 use Test::More;
-
-# use BRIANG::Utils;
 
 my $MODULE = 'BRIANG::Utils';
 

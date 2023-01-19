@@ -1,14 +1,5 @@
-#!/usr/bin/env perl
-
 use strict;  use warnings;
 
-BEGIN {
-    if ($ENV{INSIDE_EMACS}) {
-        chdir '..' until -d 't';
-        use lib 'lib';
-    }
-}
-################################################################################
 use Test::More;
 use Test::Exception;
 

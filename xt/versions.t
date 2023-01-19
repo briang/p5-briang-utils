@@ -1,14 +1,5 @@
-#!/usr/bin/env perl
+use strict;  use warnings;
 
-use strict;  use warnings FATAL => 'all';
-
-BEGIN {
-    if ($ENV{INSIDE_EMACS}) {
-        chdir '..' until -d 't';
-        use lib 'lib';
-    }
-}
-################################################################################
 use ExtUtils::MM;
 use File::Find::Rule;
 
