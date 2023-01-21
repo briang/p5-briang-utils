@@ -15,6 +15,7 @@ WriteMakefile(
     },
     BUILD_REQUIRES => {
         'Config'              => 0,
+        'File::Temp'          => 0,
         'lib'                 => 0,
         'strict'              => 0,
         'Test::Exception'     => 0,
